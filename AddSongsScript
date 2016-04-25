@@ -14,7 +14,7 @@
 # Print Friendly Message
 echo "ARRRR MATEY, PIRATIN' THE MUSIC"
 
-# Navigate to this folder
+# Navigate to the git folder
 cd ~/Music/.git/MusicURLs
 
 # Update list
@@ -37,3 +37,5 @@ git push
 
 # State Download Complete
 echo "BOOTY LOOTED"
+
+exit 0
