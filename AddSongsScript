@@ -11,14 +11,29 @@
 ## Usage: AddSongsScript (No Command Line Arguments)
 #
 
+# Print Friendly Message
+echo "ARRRR MATEY, PIRATIN' THE MUSIC"
+
+# Navigate to this folder
+cd ~/Music/.git/MusicURLs
+
+# Update list
+git pull
+
 # Download every song in the list
-for song in $(cat ./MusicURLs/songs.txt) ; do
+for song in $(cat ./songs.txt) ; do
 	youtube-dl $song
 done
 
 # Delete the list
-#rm ./MusicURLs/songs.txt
+rm ./songs.txt
 
 # Create a new empty list
-#touch ./MusicURLs/songs.txt
+touch ./songs.txt
 
+# Push Changes
+git commit -a -m "Pulled Songs"
+git push
+
+# State Download Complete
+echo "BOOTY LOOTED"
