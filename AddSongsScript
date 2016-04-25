@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#
+## AddSongsScipt
+#
+## Shell Command Scipt to:
+## Pull list of song URLs to download from github
+## Download MP3 audio of songs
+## Push empty list to github
+#
+## Usage: AddSongsScript (No Command Line Arguments)
+#
+
+# Download every song in the list
+for song in $(cat ./MusicURLs/songs.txt) ; do
+	youtube-dl $song
+done
+
+# Delete the list
+#rm ./MusicURLs/songs.txt
+
+# Create a new empty list
+#touch ./MusicURLs/songs.txt
+
