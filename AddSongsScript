@@ -15,14 +15,14 @@
 echo "ARRRR MATEY, PIRATIN' THE MUSIC"
 
 # Navigate to the git folder
-cd ~/Music/.git/MusicURLs
+cd ~/Music/MusicURLs
 
 # Update list
 git pull
 
 # Download every song in the list
 for song in $(cat ./songs.txt) ; do
-	youtube-dl $song
+	youtube-dl $song -x --audio-format mp3 -o ~/Music/
 done
 
 # Delete the list
