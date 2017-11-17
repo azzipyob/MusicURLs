@@ -22,7 +22,7 @@ git pull
 
 # Download every song in the list
 for song in $(cat ./songs.txt) ; do
-	youtube-dl $song -x --audio-format mp3 -o ~/Music/
+	youtube-dl $song -x --audio-format mp3 -o "/home/phil/Music/.%(ext)s"
 done
 
 # Delete the list
